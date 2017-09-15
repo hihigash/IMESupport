@@ -21,6 +21,9 @@ BOOL WINAPI DllMain(HINSTANCE hModuleDLL, DWORD fdwReason, LPVOID lpvReserved)
 {
 	hModule = hModuleDLL;
 
+	// Hi-DPI Support
+	SetProcessDPIAware();
+	
 	switch (fdwReason) {
 	case DLL_PROCESS_ATTACH:
 		break;
